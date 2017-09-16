@@ -19,9 +19,9 @@ const whenGifsLoad = function() {
 };
 
 const whenCategoriesLoad = function(){
-	let categoryArry = JSON.parse(this.responseText).categories;
+	let categoryArray = JSON.parse(this.responseText).categories;
 	// combines arrays
-	combineArrays(categoryArry);
+	combineArrays(categoryArray);
 };
 
 const combineArrays = (categories) => {
@@ -43,5 +43,9 @@ const initializer = () => {
 	loadGifs(whenGifsLoad, errorFunction);
 };
 
-module.exports = initializer;
+const getGifs = () => {
+	return gifArray;
+};
+
+module.exports = {initializer, getGifs};
 

@@ -2,4 +2,9 @@
 
 const doItAll = require('./data');
 
-doItAll();
+
+doItAll.initializer();
+const activateEvents = require('./events');
+
+doItAll.initializer();
+activateEvents.filterEvent();
